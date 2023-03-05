@@ -1,0 +1,49 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap");
+
+.Content {
+    height: 100vh;
+    padding: 0 50px;
+    display: flex;
+    flex-flow: column;
+}
+
+.LightFont {
+    color: #ffffff;
+    font-family: "Outfit", sans-serif;
+    font-style: light;
+    font-weight: 300;
+    font-size: 2.7vw;
+}
+
+.SemiBoldFont {
+    font-family: "Outfit", sans-serif;
+    font-style: normal;
+    font-weight: 600;
+}
+
+.ArrowL,
+.ArrowR {
+    width: 69px;
+    height: 40px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    border: none;
+    background-color: transparent;
+}
+
+.ArrowL {
+    background-image: url(./assets/ArrowL.png);
+    position: absolute;
+    top: 80%;
+    left: 10%;
+    transform: translate(-50%, -50%);
+}
+
+.ArrowR {
+    background-image: url(./assets/ArrowR.png);
+    position: absolute;
+    top: 80%;
+    left: 90%;
+    transform: translate(-50%, -50%);
+}

@@ -1,0 +1,98 @@
+.Question {
+    position: absolute;
+    top: 13%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    color: #7dbbb9;
+    font-size: 50px;
+}
+
+.TransparentInput {
+    border: none;
+    border-bottom: 3px solid #ffffff;
+    width: 30vw;
+    background-color: transparent;
+}
+
+.TransparentInput:focus {
+    outline: none;
+}
+
+.SubmitButton {
+    position: absolute;
+    top: 75%;
+    left: 71%;
+    transform: translate(-50%, -50%);
+    z-index: 50;
+
+    border: none;
+    background-color: transparent;
+    color: #6f6e6e;
+    font-size: 1.8vw;
+}
+
+.Column {
+    float: left;
+    width: 33.33%;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    gap: 15px;
+}
+
+.Row {
+    display: flex;
+    justify-content: center;
+}
+
+.SelectionGroup {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 75vh;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    gap: 15px;
+}
+
+.UnselectedButton,
+.SelectedButton,
+.UnselectedButtonBig,
+.SelectedButtonBig {
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    width: 290px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    flex-flow: column;
+
+    color: #ffffff;
+    font-family: "Outfit", sans-serif;
+    font-weight: 300;
+    font-size: 40px;
+}
+
+.UnselectedButton {
+    background-image: url("./assets/button-g.png");
+}
+
+.SelectedButton {
+    background-image: url("./assets/button-b.png");
+}
+
+.UnselectedButtonBig {
+    background-image: url("./assets/button-g-big.png");
+    width: 400px;
+    height: 100px;
+}
+
+.SelectedButtonBig {
+    background-image: url("./assets/button-b-big.png");
+    width: 400px;
+    height: 100px;
+}

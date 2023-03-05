@@ -1,0 +1,71 @@
+.NameFormBlock {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 45vw;
+    max-width: 800px;
+    min-height: 400px;
+    background-image: url("./assets/Name_Contact_Block.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    padding: 4% 7% 2% 12%;
+    z-index: 2;
+
+    display: flex;
+    justify-content: center;
+    flex-flow: column;
+}
+
+.FormItem {
+    padding-bottom: 45px;
+    display: flex;
+    flex-flow: row;
+}
+
+.Question {
+    display: inline-block;
+}
+
+.TransparentInput {
+    border: none;
+    border-bottom: 3px solid #ffffff;
+    width: 30vw;
+    background-color: transparent;
+}
+
+.TransparentInput:focus {
+    outline: none;
+}
+
+.TwoPeopleImg {
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    width: 300px;
+    transform: translate(-50%, -50%);
+    z-index: 3;
+}
+
+.ThreeCircleImg {
+    position: absolute;
+    top: 76%;
+    left: 80%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    z-index: 1;
+}
+
+.SubmitButton {
+    position: absolute;
+    top: 75%;
+    left: 71%;
+    transform: translate(-50%, -50%);
+    z-index: 50;
+
+    border: none;
+    background-color: transparent;
+    color: #6f6e6e;
+    font-size: 1.8vw;
+}
