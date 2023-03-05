@@ -1,5 +1,4 @@
-This repo contains the frontend and backend code for MCIT_connect. I git cloned Radin's repo because I need an access token to clone in the ec2 instance.
-
+This repo contains the frontend and backend code for MCIT_connect. Frontend code from Radin + Jake - https://github.com/ranojoomi/MCITConnect-Frontend
 Updates:
 - on my local machine, frontend and backend are connected (via `proxy` in `web/package.json`) and writing to the database works! 
 - i've deployed the code to an ec2 instance and served the React and Flask app - http://52.91.132.146/ (currently http, will need to get an SSL certificate which requires additional setup and also link to the custom domain I got - mcitconnect.com lol)
