@@ -1,4 +1,6 @@
 ## CIT Connect 
+This repo contains the frontend and backend code for MCIT_connect. Frontend code by [@ranojoomi](https://github.com/ranojoomi) and [@jakethe555](https://github.com/jakethe555)!
+
 
 ### Setting up repo
 1. clone repo 
