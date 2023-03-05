@@ -11,8 +11,9 @@ current issue:
 - https://create-react-app.dev/docs/proxying-api-requests-in-development/
 - I tried updating to `proxy : {public IP address:5000}`, but this results in **CORS** errors that I wasn't able to resolve
 
-potential solutions (I haven't tried yet):
+to investigate:
 - using a proxy middleware [see: https://github.com/chimurai/http-proxy-middleware/issues/464]
+- resolving CORS issues
 
 
 Side note - I'm currently using sqlite3 for now to test deployment to ec2 (but will need to set up a postgres or MySQL instance once frontend and backend are actually connected in prod environment) :(  [will only need to make a minor change in `api/app.py` >> DATABASE_URI]
