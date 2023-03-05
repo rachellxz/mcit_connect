@@ -1,22 +1,22 @@
 This repo contains the frontend and backend code for MCIT_connect. Frontend code from Radin + Jake - https://github.com/ranojoomi/MCITConnect-Frontend
 
-Updates:
+### Updates:
 - on my local machine, frontend and backend are connected (via `proxy` in `web/package.json`) and writing to the database works! 
 - i've deployed the code to an ec2 instance and served the React and Flask app - http://52.91.132.146/ (currently http, will need to get an SSL certificate which requires additional setup and also link to the custom domain I got - mcitconnect.com lol)
 
-current issue:
+**current issue:**
 *frontend and backend are disconnected in prod. API requests aren't actually made to Flask.*
     - e.g. if you submit the form and inspect Network, the response is incorrect. 
 - through some sleuthing, it is because using `proxy` to connect front+backend doesn't work in production (which is why everything is all good only in a dev environment) [see here: https://stackoverflow.com/questions/45911067/create-react-app-proxy-in-production-build?fbclid=IwAR31llNcsEIsQ39scMmc5ZU8M8ZACWDhIN3WPfBciqjMp7gMNbOQelyfsxI; https://github.com/facebook/create-react-app/issues/1087#issuecomment-262611096]
 - https://create-react-app.dev/docs/proxying-api-requests-in-development/
 - I tried updating to `proxy : {public IP address:5000}`, but this results in **CORS** errors that I wasn't able to resolve
 
-to investigate:
+**to investigate:**
 - using a proxy middleware [see: https://github.com/chimurai/http-proxy-middleware/issues/464]
 - resolving CORS issues
 
 
-Side note - I'm currently using sqlite3 for now to test deployment to ec2 (but will need to set up a postgres or MySQL instance once frontend and backend are actually connected in prod environment) :(  [will only need to make a minor change in `api/app.py` >> DATABASE_URI]
+**Side note** - I'm currently using sqlite3 for now to test deployment to ec2 (but will need to set up a postgres or MySQL instance once frontend and backend are actually connected in prod environment) :(  [will only need to make a minor change in `api/app.py` >> DATABASE_URI]
 
 
 ### DEPLOYMENT
