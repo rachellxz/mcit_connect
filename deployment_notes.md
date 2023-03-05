@@ -1,4 +1,4 @@
-This repo contains the frontend and backend code for MCIT_connect. Frontend code from Radin + Jake - https://github.com/ranojoomi/MCITConnect-Frontend
+This repo contains the frontend and backend code for MCIT_connect. Frontend code by Radin + Jake - https://github.com/ranojoomi/MCITConnect-Frontend. I cloned their repo because I needed a personal access token to clone in the remote server.
 
 ### Updates:
 - on my local machine, frontend and backend are connected (via `proxy` in `web/package.json`) and writing to the database works! 
