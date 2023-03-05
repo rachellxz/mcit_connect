@@ -77,8 +77,7 @@ check that it's working: `which node` and `node --version`
 - `git clone https://github.com/rachellxz/mcit_connect.git`
 
 Follow the set up steps in the git repo (e.g. pip install dependencies, setting env variables, virtual env)
-- when prompted for username and password: rachellxz
-- use access token for password: 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
+- when prompted for username and password, use access token for password (if required): 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 (< this is no longer valid)
 
 ## RUN THE APP
 cd into `api`
