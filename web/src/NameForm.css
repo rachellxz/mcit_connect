@@ -69,3 +69,12 @@
     color: #6f6e6e;
     font-size: 1.8vw;
 }
+
+#continue-btn {
+
+    color: #226a4d;
+}
+
+#continue-btn:hover {
+    color: #afafaf;
+}

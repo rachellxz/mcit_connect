@@ -56,7 +56,7 @@ class PlaceForm extends React.Component {
                     <h2
                         className={`${PlaceStyles.SemiBoldFont} ${PlaceStyles.Question}`}
                     >
-                        Places You (Would) Love to Travel To
+                        Things you look for in an ideal vacation
                     </h2>
                 </div>
 

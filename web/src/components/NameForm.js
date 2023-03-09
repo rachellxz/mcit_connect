@@ -107,7 +107,7 @@ class NameForm extends React.Component {
                             : this.handleError
                     }
                 >
-                    Click to continue
+                    <span id="continue-btn"> Click to continue </span>
                 </button>
             </div>
         );
