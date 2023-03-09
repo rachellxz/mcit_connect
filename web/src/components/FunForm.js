@@ -103,7 +103,7 @@ class FunForm extends React.Component {
 
                     <div className={FunStyles.TwoSumsBlock}>
                         <div className={FunStyles.TwoSumsQ}>
-                            Do this "Two Sums" Questions
+                            Try doing this <a href="https://leetcode.com/problems/two-sum/" target="_blank"> "Two Sum" </a> Question 😜
                         </div>
                         <form
                             onSubmit={(e) => {
@@ -146,7 +146,7 @@ class FunForm extends React.Component {
                         }}
                     ></button>
                 </div>
-            </div>
+            </div >
         );
     }
 }
