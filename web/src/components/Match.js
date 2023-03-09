@@ -67,16 +67,46 @@ class Match extends React.Component {
 
     // API call to be added!! FLASK
     handleFormSubmit = async () => {
-        console.log("TEST SUBMIT FORM::");
         console.log(this.state);
 
-        try {
-            const response = await axios.post("/api/v1/signup", this.state);
-            console.log("submitting form!");
-            console.log(response)
-        } catch (error) {
-            console.log("error submitting form", error);
+        const data = {
+            "records": [
+                {
+                    "fields": {
+                        "email": this.state.email,
+                        "lastName": this.state.lastName,
+                        "firstName": this.state.firstName,
+                        "selectedCatDogList": this.state.selectedCatDogList.toString,
+                        "selectedCuisineList": this.state.selectedCuisineList.toString,
+                        "selectedDayList": this.state.selectedDayList.toString,
+                        "selectedHobbyList": this.state.selectedHobbyList.toString,
+                        "selectedMovieList": this.state.selectedMovieList.toString,
+                        "selectedMusicList": this.state.selectedMusicList.toString,
+                        "selectedPlaceList": this.state.selectedPlaceList.toString,
+                        "selectedSpacesTabs": this.state.selectedSpacesTabs.toString,
+                        "languages": this.state.languages,
+                        "classes": this.state.classes,
+                        "twoSums": this.state.twoSums,
+                    }
+                }
+            ]
         }
+
+        const env_apiKey = process.env.REACT_APP_API_KEY;
+        const env_at_url = process.env.REACT_APP_AIRTABLE_URL;
+
+        axios.post(`${env_at_url}`, data, {
+            headers: {
+                'Authorization': `Bearer ${env_apiKey}`,
+                'Content-Type': 'application/json'
+            }
+        })
+            .then(response => {
+                console.log("Form submitted/record created", response.data);
+            })
+            .catch(error => {
+                console.log("Error creating record", error);
+            })
 
         this.setState({ redirect: true });
     }
