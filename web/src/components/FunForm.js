@@ -41,7 +41,7 @@ class FunForm extends React.Component {
                 <div
                     className={`${FunStyles.Question1Block} ${FunStyles.RegularFont}`}
                 >
-                    <text>What is your favorite language and IDE?</text>
+                    <text>What is your favorite programming language and IDE?</text>
                     <form
                         onSubmit={(e) => {
                             e.preventDefault();
