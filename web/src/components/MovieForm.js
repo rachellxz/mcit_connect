@@ -69,7 +69,7 @@ class MovieForm extends React.Component {
                     <h2
                         className={`${MovieStyles.SemiBoldFont} ${MovieStyles.Question}`}
                     >
-                        Favorite Movie Genre
+                        Favorite TV/Movie Genre
                     </h2>
                 </div>
 

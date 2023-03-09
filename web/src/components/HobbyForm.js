@@ -77,7 +77,8 @@ class HobbyForm extends React.Component {
                     <h2
                         className={`${HobbyStyles.SemiBoldFont} ${HobbyStyles.Question}`}
                     >
-                        Hobbies You Prefer
+                        Hobbies/Activities You Enjoy
+
                     </h2>
                 </div>
 
