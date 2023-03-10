@@ -13,6 +13,8 @@ function App() {
         <Route exact path="/match" element={<Match />}></Route>
         <Route exact path="/homepage" element={<HomePage />}></Route>
         <Route exact path="/finished" element={<FinishPage />}></Route>
+        <Route path='*' element={<HomePage />} />
+
       </Routes>
     </Router>
   );
