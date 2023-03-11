@@ -1,6 +1,6 @@
 # This file contains a python script to 
 #   1. create a sqlite database (database.db)
-#   2. read from a CSV file (data downloaded from Airtable) 
+#   2. read from a CSV file (data downloaded from Airtable)
 #   3. process user's input to the survey
 #   4. save user data to sqlite database with one-hot encoding (i.e. with the correct table columns)
 #   5. export the database as csv file (output.csv) - which can be used as a dataframe etc.
@@ -12,6 +12,8 @@
 # Note: this script is meant to be run *once* on the final csv downloaded from Airtable
 #       if you wish to rerun it again, make sure to first delete the old database.db and output.csv that was created
 
+# TODO:
+csv_file_name = "users.csv" # RENAME THE CSV FILE 
 
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
@@ -458,7 +460,7 @@ num = len(results)
 
 
 # write data to database
-with open("users.csv", 'r') as file:
+with open(csv_file_name, 'r') as file:
   csvreader = csv.reader(file, delimiter=',')
   row_num = 0
 
