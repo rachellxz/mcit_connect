@@ -3,6 +3,7 @@ import React from "react";
 import twoPeopleImg from "../assets/twoPeople.png";
 import threeCircleImg from "../assets/threeCircle.png";
 import "../NameForm.css";
+import "../match.css";
 
 class NameForm extends React.Component {
     constructor(props) {
@@ -43,7 +44,7 @@ class NameForm extends React.Component {
             handleIsVisible,
         } = this.props;
         return (
-            <div>
+            <div className="wrapper">
                 <div className="NameFormBlock">
                     <form
                         className="FormItem LightFont"
@@ -86,8 +87,7 @@ class NameForm extends React.Component {
                         <label>
                             <div className="Question">Email:&nbsp;</div>
                             <input
-                                style={{ width: "36vw" }}
-                                className="TransparentInput LightFont"
+                                className="TransparentInput LightFont EmailInput"
                                 type="email"
                                 value={email}
                                 onChange={handleEmailChange}
@@ -96,13 +96,17 @@ class NameForm extends React.Component {
                     </form>
                 </div>
                 <img className="TwoPeopleImg" alt="" src={twoPeopleImg}></img>
-                <img className="ThreeCircleImg" alt="" src={threeCircleImg}></img>
+                <img
+                    className="ThreeCircleImg"
+                    alt=""
+                    src={threeCircleImg}
+                ></img>
                 <button
                     className="LightFont SubmitButton"
                     onClick={
                         this.props.firstName &&
-                            this.props.lastName &&
-                            this.props.email
+                        this.props.lastName &&
+                        this.props.email
                             ? this.props.handleIsVisible
                             : this.handleError
                     }

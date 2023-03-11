@@ -1,7 +1,7 @@
 .NameFormBlock {
     position: absolute;
     top: 40%;
-    left: 50%;
+    left: 45%;
     transform: translate(-50%, -50%);
     width: 45vw;
     max-width: 800px;
@@ -39,6 +39,10 @@
     outline: none;
 }
 
+.EmailInput {
+    width: 36vw;
+}
+
 .TwoPeopleImg {
     position: absolute;
     top: 80%;
@@ -71,10 +75,56 @@
 }
 
 #continue-btn {
-
     color: #226a4d;
 }
 
 #continue-btn:hover {
     color: #afafaf;
+}
+@media only screen and (max-width: 1200px) {
+    .SubmitButton {
+        top: 75%;
+        left: 75%;
+    }
+}
+
+@media only screen and (min-height: 700px) {
+    .SubmitButton {
+        top: 67%;
+        left: 75%;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    .NameFormBlock {
+        position: absolute;
+        width: 80%;
+        height: 60%;
+        top: 50%;
+        left: 50%;
+        background-color: #b1c5f3;
+        border-radius: 25px;
+        padding: 0%;
+        align-items: center;
+
+        background-image: none;
+    }
+    .SubmitButton {
+        top: 90%;
+        left: 50%;
+    }
+    .TransparentInput {
+        width: 80%;
+    }
+    .Question {
+        width: 100%;
+    }
+
+    .ThreeCircleImg {
+        visibility: hidden;
+    }
+
+    .TwoPeopleImg {
+        visibility: hidden;
+    }
 }

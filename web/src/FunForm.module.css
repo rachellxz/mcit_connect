@@ -1,12 +1,16 @@
 .Content {
+    width: 100%;
     /* position: relative; */
+    justify-content: center;
+    display: flex;
+    padding-top: 100px;
 }
 
 .Question1Block {
-    position: absolute;
-    top: 110px;
-    left: 100px;
-    /* transform: translate(-50%, -50%); */
+    /* position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); */
     width: 45vw;
     display: flex;
     align-items: flex-start;
@@ -20,9 +24,10 @@
 }
 
 .TwoSumsBlock {
-    position: absolute;
+    /* position: absolute;
     top: 330px;
     right: -300px;
+    transform: translate(-50%, -50%); */
 
     display: flex;
     align-items: flex-start;
@@ -46,9 +51,12 @@
     text-align: center;
 }
 
-.TwoSumsA {
+.FormA {
     position: relative;
     top: -60px;
+}
+
+.TwoSumsA {
     border: none;
     background-color: transparent;
 
@@ -91,10 +99,9 @@
     position: absolute;
     /* top: 500px;
     right: -450px; */
+    bottom: -30px;
+    right: 0;
 
-    top: 185%;
-    left: 182%;
-    transform: translate(-50%, -50%);
     width: 200px;
     height: 200px;
     z-index: 50;
@@ -136,7 +143,6 @@
 }
 
 @-webkit-keyframes bounce {
-
     0%,
     100% {
         -webkit-transform: translateY(0);
@@ -148,7 +154,6 @@
 }
 
 @-moz-keyframes bounce {
-
     0%,
     100% {
         -moz-transform: translateY(0);
@@ -160,7 +165,6 @@
 }
 
 @-o-keyframes bounce {
-
     0%,
     100% {
         -o-transform: translateY(0);
@@ -172,7 +176,6 @@
 }
 
 @keyframes bounce {
-
     0%,
     100% {
         transform: translateY(0);
@@ -183,15 +186,12 @@
     }
 }
 
-
 .UnselectedButton:hover {
     animation: bounce 0.5s infinite;
     -webkit-animation: bounce 0.5s infinite;
     -moz-animation: bounce 0.5s infinite;
     -o-animation: bounce 0.5s infinite;
 }
-
-
 
 .SelectedButton {
     background-image: url("./assets/button-b.png");
@@ -202,4 +202,53 @@
     -webkit-animation: bounce 0.5s infinite;
     -moz-animation: bounce 0.5s infinite;
     -o-animation: bounce 0.5s infinite;
+}
+
+@media only screen and (max-width: 700px) {
+    .RegularFont {
+        font-size: 20px;
+    }
+
+    .UnselectedButton,
+    .SelectedButton {
+        width: 130px;
+        height: 50px;
+        font-size: 20px;
+    }
+
+    .Question1Block {
+        width: 85%;
+    }
+
+    .TwoSumsBlock {
+        width: 85%;
+    }
+
+    .TransparentInput {
+        width: 300px;
+        height: 30px;
+    }
+    .QRow {
+        gap: 10px;
+    }
+
+    .TwoSumsQ {
+        width: 330px;
+        height: 140px;
+        white-space: nowrap;
+    }
+
+    .FormA {
+    }
+
+    .TwoSumsA {
+        width: 290px;
+        height: 140px;
+    }
+    .SubmitButton {
+        position: absolute;
+
+        width: 140px;
+        height: 140px;
+    }
 }

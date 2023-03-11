@@ -77,9 +77,7 @@
     font-size: 40px;
 }
 
-
 @-webkit-keyframes bounce {
-
     0%,
     100% {
         -webkit-transform: translateY(0);
@@ -91,7 +89,6 @@
 }
 
 @-moz-keyframes bounce {
-
     0%,
     100% {
         -moz-transform: translateY(0);
@@ -103,7 +100,6 @@
 }
 
 @-o-keyframes bounce {
-
     0%,
     100% {
         -o-transform: translateY(0);
@@ -115,7 +111,6 @@
 }
 
 @keyframes bounce {
-
     0%,
     100% {
         transform: translateY(0);
@@ -130,14 +125,12 @@
     background-image: url("./assets/button-g.png");
 }
 
-
 .UnselectedButton:hover {
     animation: bounce 0.5s infinite;
     -webkit-animation: bounce 0.5s infinite;
     -moz-animation: bounce 0.5s infinite;
     -o-animation: bounce 0.5s infinite;
 }
-
 
 .SelectedButton {
     background-image: url("./assets/button-b.png");
@@ -149,7 +142,6 @@
     -moz-animation: bounce 0.5s infinite;
     -o-animation: bounce 0.5s infinite;
 }
-
 
 .UnselectedButtonBig {
     background-image: url("./assets/button-g-big.png");
@@ -175,4 +167,25 @@
     -webkit-animation: bounce 0.5s infinite;
     -moz-animation: bounce 0.5s infinite;
     -o-animation: bounce 0.5s infinite;
+}
+
+@media only screen and (max-width: 700px) {
+    .Question {
+        top: 18%;
+        white-space: nowrap;
+    }
+
+    .UnselectedButton,
+    .SelectedButton,
+    .UnselectedButtonBig,
+    .SelectedButtonBig {
+        /* width: 180px;
+        height: 66px;
+        font-size: 20px; */
+    }
+
+    .Row {
+        flex-flow: column;
+        gap: 30px;
+    }
 }

@@ -41,7 +41,9 @@ class FunForm extends React.Component {
                 <div
                     className={`${FunStyles.Question1Block} ${FunStyles.RegularFont}`}
                 >
-                    <text>What is your favorite programming language and IDE?</text>
+                    <text>
+                        What is your favorite programming language and IDE?
+                    </text>
                     <form
                         onSubmit={(e) => {
                             e.preventDefault();
@@ -103,9 +105,18 @@ class FunForm extends React.Component {
 
                     <div className={FunStyles.TwoSumsBlock}>
                         <div className={FunStyles.TwoSumsQ}>
-                            Try doing this <a href="https://leetcode.com/problems/two-sum/" target="_blank"> "Two Sum" </a> Question 😜
+                            Try doing this{" "}
+                            <a
+                                href="https://leetcode.com/problems/two-sum/"
+                                target="_blank"
+                            >
+                                {" "}
+                                "Two Sum"{" "}
+                            </a>{" "}
+                            Question 😜
                         </div>
                         <form
+                            className={FunStyles.FormA}
                             onSubmit={(e) => {
                                 e.preventDefault();
                             }}
@@ -146,7 +157,7 @@ class FunForm extends React.Component {
                         }}
                     ></button>
                 </div>
-            </div >
+            </div>
         );
     }
 }

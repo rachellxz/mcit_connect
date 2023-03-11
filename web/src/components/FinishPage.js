@@ -9,7 +9,6 @@ const FinishPage = () => {
     return (
         <div className="homepage App">
             <h2 className="Title">CIT CONNECT</h2>
-            <h3 className="sub">Fun for MCIT</h3>
             <div className="myText">
                 <p className="mainLink">Thanks for your response!</p>
             </div>
