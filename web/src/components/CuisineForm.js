@@ -28,7 +28,7 @@ class CuisineForm extends React.Component {
                 false,
                 false,
                 false,
-                false
+                false,
             ],
         };
 
@@ -66,132 +66,259 @@ class CuisineForm extends React.Component {
             handleIsVisibleL,
             handleIsVisibleR,
         } = this.props;
-        return (
-            <div>
+        if (window.innerWidth > 700) {
+            return (
                 <div>
-                    <h2
-                        className={`${CuisineStyle.SemiBoldFont} ${CuisineStyle.Question}`}
-                    >
-                        Favorite Cuisine
-                    </h2>
+                    <div>
+                        <h2
+                            className={`${CuisineStyle.SemiBoldFont} ${CuisineStyle.Question}`}
+                        >
+                            Favorite Cuisine
+                        </h2>
+                    </div>
+
+                    <div className={CuisineStyle.SelectionGroup}>
+                        <div className={CuisineStyle.Row}>
+                            <div
+                                className={
+                                    this.state.selectedOptions[0]
+                                        ? `${CuisineStyle.SelectedButton}`
+                                        : `${CuisineStyle.UnselectedButton}`
+                                }
+                                onClick={() => this.handleSelectionChange(0)}
+                            >
+                                <text>Indian</text>
+                            </div>
+                            <div
+                                className={
+                                    this.state.selectedOptions[1]
+                                        ? `${CuisineStyle.SelectedButton}`
+                                        : `${CuisineStyle.UnselectedButton}`
+                                }
+                                onClick={() => this.handleSelectionChange(1)}
+                            >
+                                <text>Chinese</text>
+                            </div>
+                            <div
+                                className={
+                                    this.state.selectedOptions[2]
+                                        ? `${CuisineStyle.SelectedButton}`
+                                        : `${CuisineStyle.UnselectedButton}`
+                                }
+                                onClick={() => this.handleSelectionChange(2)}
+                            >
+                                <text>Italian</text>
+                            </div>
+                        </div>
+                        <div className={CuisineStyle.Row}>
+                            <div
+                                className={
+                                    this.state.selectedOptions[3]
+                                        ? `${CuisineStyle.SelectedButton}`
+                                        : `${CuisineStyle.UnselectedButton}`
+                                }
+                                onClick={() => this.handleSelectionChange(3)}
+                            >
+                                <text>Mexican</text>
+                            </div>
+                            <div
+                                className={
+                                    this.state.selectedOptions[4]
+                                        ? `${CuisineStyle.SelectedButtonBig}`
+                                        : `${CuisineStyle.UnselectedButtonBig}`
+                                }
+                                onClick={() => this.handleSelectionChange(4)}
+                            >
+                                <text>Mediterranean</text>
+                            </div>
+                            <div
+                                className={
+                                    this.state.selectedOptions[5]
+                                        ? `${CuisineStyle.SelectedButton}`
+                                        : `${CuisineStyle.UnselectedButton}`
+                                }
+                                onClick={() => this.handleSelectionChange(5)}
+                            >
+                                <text>American</text>
+                            </div>
+                        </div>
+                        <div className={CuisineStyle.Row}>
+                            <div
+                                className={
+                                    this.state.selectedOptions[6]
+                                        ? `${CuisineStyle.SelectedButton}`
+                                        : `${CuisineStyle.UnselectedButton}`
+                                }
+                                onClick={() => this.handleSelectionChange(6)}
+                            >
+                                <text>Korean</text>
+                            </div>
+                            <div
+                                className={
+                                    this.state.selectedOptions[7]
+                                        ? `${CuisineStyle.SelectedButton}`
+                                        : `${CuisineStyle.UnselectedButton}`
+                                }
+                                onClick={() => this.handleSelectionChange(7)}
+                            >
+                                <text>Japanese</text>
+                            </div>
+                            <div
+                                className={
+                                    this.state.selectedOptions[8]
+                                        ? `${CuisineStyle.SelectedButton}`
+                                        : `${CuisineStyle.UnselectedButton}`
+                                }
+                                onClick={() => this.handleSelectionChange(8)}
+                            >
+                                <text>Thai</text>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button
+                        className="ArrowL"
+                        onClick={() => {
+                            this.updateSelection();
+                            this.props.handleIsVisibleL(num);
+                        }}
+                    ></button>
+
+                    <button
+                        className="ArrowR"
+                        onClick={() => {
+                            this.updateSelection();
+                            this.props.handleIsVisibleR(num);
+                        }}
+                    ></button>
                 </div>
+            );
+        } else {
+            return (
+                <div>
+                    <div>
+                        <h2
+                            className={`${CuisineStyle.SemiBoldFont} ${CuisineStyle.Question}`}
+                        >
+                            Favorite Cuisine
+                        </h2>
+                    </div>
 
-                <div className={CuisineStyle.SelectionGroup}>
-                    <div className={CuisineStyle.Row}>
-                        <div
-                            className={
-                                this.state.selectedOptions[0]
-                                    ? `${CuisineStyle.SelectedButton}`
-                                    : `${CuisineStyle.UnselectedButton}`
-                            }
-                            onClick={() => this.handleSelectionChange(0)}
-                        >
-                            <text>Indian</text>
+                    <div className={CuisineStyle.SelectionGroup}>
+                        <div className={CuisineStyle.Column}>
+                            <div
+                                className={
+                                    this.state.selectedOptions[0]
+                                        ? `${CuisineStyle.SelectedButton}`
+                                        : `${CuisineStyle.UnselectedButton}`
+                                }
+                                onClick={() => this.handleSelectionChange(0)}
+                            >
+                                <text>Indian</text>
+                            </div>
+                            <div
+                                className={
+                                    this.state.selectedOptions[1]
+                                        ? `${CuisineStyle.SelectedButton}`
+                                        : `${CuisineStyle.UnselectedButton}`
+                                }
+                                onClick={() => this.handleSelectionChange(1)}
+                            >
+                                <text>Chinese</text>
+                            </div>
+                            <div
+                                className={
+                                    this.state.selectedOptions[2]
+                                        ? `${CuisineStyle.SelectedButton}`
+                                        : `${CuisineStyle.UnselectedButton}`
+                                }
+                                onClick={() => this.handleSelectionChange(2)}
+                            >
+                                <text>Italian</text>
+                            </div>
+                            <div
+                                className={
+                                    this.state.selectedOptions[3]
+                                        ? `${CuisineStyle.SelectedButton}`
+                                        : `${CuisineStyle.UnselectedButton}`
+                                }
+                                onClick={() => this.handleSelectionChange(3)}
+                            >
+                                <text>Mexican</text>
+                            </div>
                         </div>
-                        <div
-                            className={
-                                this.state.selectedOptions[1]
-                                    ? `${CuisineStyle.SelectedButton}`
-                                    : `${CuisineStyle.UnselectedButton}`
-                            }
-                            onClick={() => this.handleSelectionChange(1)}
-                        >
-                            <text>Chinese</text>
-                        </div>
-                        <div
-                            className={
-                                this.state.selectedOptions[2]
-                                    ? `${CuisineStyle.SelectedButton}`
-                                    : `${CuisineStyle.UnselectedButton}`
-                            }
-                            onClick={() => this.handleSelectionChange(2)}
-                        >
-                            <text>Italian</text>
+                        <div className={CuisineStyle.Column}>
+                            <div
+                                className={
+                                    this.state.selectedOptions[4]
+                                        ? `${CuisineStyle.SelectedButtonBig}`
+                                        : `${CuisineStyle.UnselectedButtonBig}`
+                                }
+                                onClick={() => this.handleSelectionChange(4)}
+                            >
+                                <text>Mediterranean</text>
+                            </div>
+                            <div
+                                className={
+                                    this.state.selectedOptions[5]
+                                        ? `${CuisineStyle.SelectedButton}`
+                                        : `${CuisineStyle.UnselectedButton}`
+                                }
+                                onClick={() => this.handleSelectionChange(5)}
+                            >
+                                <text>American</text>
+                            </div>
+                            <div
+                                className={
+                                    this.state.selectedOptions[6]
+                                        ? `${CuisineStyle.SelectedButton}`
+                                        : `${CuisineStyle.UnselectedButton}`
+                                }
+                                onClick={() => this.handleSelectionChange(6)}
+                            >
+                                <text>Korean</text>
+                            </div>
+                            <div
+                                className={
+                                    this.state.selectedOptions[7]
+                                        ? `${CuisineStyle.SelectedButton}`
+                                        : `${CuisineStyle.UnselectedButton}`
+                                }
+                                onClick={() => this.handleSelectionChange(7)}
+                            >
+                                <text>Japanese</text>
+                            </div>
+                            <div
+                                className={
+                                    this.state.selectedOptions[8]
+                                        ? `${CuisineStyle.SelectedButton}`
+                                        : `${CuisineStyle.UnselectedButton}`
+                                }
+                                onClick={() => this.handleSelectionChange(8)}
+                            >
+                                <text>Thai</text>
+                            </div>
                         </div>
                     </div>
-                    <div className={CuisineStyle.Row}>
-                        <div
-                            className={
-                                this.state.selectedOptions[3]
-                                    ? `${CuisineStyle.SelectedButton}`
-                                    : `${CuisineStyle.UnselectedButton}`
-                            }
-                            onClick={() => this.handleSelectionChange(3)}
-                        >
-                            <text>Mexican</text>
-                        </div>
-                        <div
-                            className={
-                                this.state.selectedOptions[4]
-                                    ? `${CuisineStyle.SelectedButtonBig}`
-                                    : `${CuisineStyle.UnselectedButtonBig}`
-                            }
-                            onClick={() => this.handleSelectionChange(4)}
-                        >
-                            <text>Mediterranean</text>
-                        </div>
-                        <div
-                            className={
-                                this.state.selectedOptions[5]
-                                    ? `${CuisineStyle.SelectedButton}`
-                                    : `${CuisineStyle.UnselectedButton}`
-                            }
-                            onClick={() => this.handleSelectionChange(5)}
-                        >
-                            <text>American</text>
-                        </div>
-                    </div>
-                    <div className={CuisineStyle.Row}>
-                        <div
-                            className={
-                                this.state.selectedOptions[6]
-                                    ? `${CuisineStyle.SelectedButton}`
-                                    : `${CuisineStyle.UnselectedButton}`
-                            }
-                            onClick={() => this.handleSelectionChange(6)}
-                        >
-                            <text>Korean</text>
-                        </div>
-                        <div
-                            className={
-                                this.state.selectedOptions[7]
-                                    ? `${CuisineStyle.SelectedButton}`
-                                    : `${CuisineStyle.UnselectedButton}`
-                            }
-                            onClick={() => this.handleSelectionChange(7)}
-                        >
-                            <text>Japanese</text>
-                        </div>
-                        <div
-                            className={
-                                this.state.selectedOptions[8]
-                                    ? `${CuisineStyle.SelectedButton}`
-                                    : `${CuisineStyle.UnselectedButton}`
-                            }
-                            onClick={() => this.handleSelectionChange(8)}
-                        >
-                            <text>Thai</text>
-                        </div>
-                    </div>
+
+                    <button
+                        className="ArrowL"
+                        onClick={() => {
+                            this.updateSelection();
+                            this.props.handleIsVisibleL(num);
+                        }}
+                    ></button>
+
+                    <button
+                        className="ArrowR"
+                        onClick={() => {
+                            this.updateSelection();
+                            this.props.handleIsVisibleR(num);
+                        }}
+                    ></button>
                 </div>
-
-                <button
-                    className="ArrowL"
-                    onClick={() => {
-                        this.updateSelection();
-                        this.props.handleIsVisibleL(num);
-                    }}
-                ></button>
-
-                <button
-                    className="ArrowR"
-                    onClick={() => {
-                        this.updateSelection();
-                        this.props.handleIsVisibleR(num);
-                    }}
-                ></button>
-            </div>
-        );
+            );
+        }
     }
 }
 

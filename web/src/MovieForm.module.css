@@ -34,11 +34,16 @@
 
 .Column {
     float: left;
-    width: 33.33%;
+    width: 50%;
     display: flex;
     flex-flow: column;
     justify-content: center;
     gap: 15px;
+}
+
+.Row {
+    display: flex;
+    justify-content: center;
 }
 
 .SelectionGroup {
@@ -49,6 +54,8 @@
     height: 75vh;
     display: flex;
     justify-content: center;
+    flex-flow: column;
+    gap: 15px;
 }
 
 .UnselectedButton,
@@ -73,7 +80,6 @@
 }
 
 @-webkit-keyframes bounce {
-
     0%,
     100% {
         -webkit-transform: translateY(0);
@@ -85,7 +91,6 @@
 }
 
 @-moz-keyframes bounce {
-
     0%,
     100% {
         -moz-transform: translateY(0);
@@ -97,7 +102,6 @@
 }
 
 @-o-keyframes bounce {
-
     0%,
     100% {
         -o-transform: translateY(0);
@@ -109,7 +113,6 @@
 }
 
 @keyframes bounce {
-
     0%,
     100% {
         transform: translateY(0);
@@ -119,7 +122,6 @@
         transform: translateY(-10px);
     }
 }
-
 
 .UnselectedButton:hover {
     animation: bounce 0.5s infinite;
@@ -137,4 +139,25 @@
     -webkit-animation: bounce 0.5s infinite;
     -moz-animation: bounce 0.5s infinite;
     -o-animation: bounce 0.5s infinite;
+}
+
+@media only screen and (max-width: 700px) {
+    .Question {
+        top: 18%;
+        width: 95%;
+    }
+
+    .UnselectedButton,
+    .SelectedButton,
+    .UnselectedButtonBig,
+    .SelectedButtonBig {
+        width: 200px;
+        height: 66px;
+        font-size: 30px;
+    }
+
+    .SelectionGroup {
+        flex-direction: row;
+        top: 55%;
+    }
 }
